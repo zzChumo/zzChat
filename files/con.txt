@@ -1,0 +1,27 @@
+感谢您使用GS Cloud Shared Server！
+
+GS Cloud Shared Server是一款基于chroot（systemd）容器的云服务器，原理是在同一台服务器上开设多个chroot（systemd）容器并进行售卖和分发，所有容器的端口、CPU、RAM和IP资源全部共享，而每个容器的用户需要自行协调并对空闲端口进行分配和使用。
+
+如果您已经做好了购买GS Cloud Shared Server的准备，请先阅读以下的注意事项：
+
+    1.服务器的80/443端口属于共享端口，无法被用户独自占用。如果您需要使用80/443端口，请在容器内的/www/conf/nginx/nginx.conf中更改Nginx配置。您的Nginx配置文件位于母机Nginx配置的http块中。
+    2.在80/443端口开设站点前，请确保您的网站文件都在/www/wwwroot文件夹内。您的/www/wwwroot目录相当于母机的/con/nginx/wwwroot/<您的ssh端口号>，请自行换算nginx.conf中的网站根目录路径。
+    3.母机的Nginx配置每天0:00、6:00、12:00、18:00重新读取一次。请在上述时间前完成您对nginx.conf的编辑，并保证没有任何语法错误。如果要立即生效母机Nginx配置，请联系您的区域管理员。
+    4.使用PHP以及伪静态服务时，请务必确认您的母机路径换算正确。
+    5.使用WebSocket开设服务时，请先使用其他端口，然后使用/www/conf/nginx/nginx.conf进行反向代理配置。
+    6.宝塔面板可以正常运行，但与GS Cloud Shared Server的共享端口机制不兼容，且在运行时资源占用较高，因此我们不允许您在GS Cloud Shared Server内安装宝塔面板。
+    7.不允许在GS Cloud Shared Server内二次开设容器进行分发和售卖，或进行挖矿等长时间高资源占用的行为。我们会根据每个容器的资源占用情况来判断用户是否违规，并在第一次进行警告，在第二次进行封禁和容器资源回收。
+    8.深圳区域不允许开设站点，且不开放80/443端口。
+    9.Kali Linux容器不对外出售和分发，所有者也不可进行转让和二次出售。
+    10.如果您需要在GS Cloud Shared Server内使用systemctl命令，请先手动安装systemd软件包。
+    11.GS Cloud Shared Server的root用户默认无密码。如需进入特权shell，请以默认用户身份执行sudo su。
+    12.GS Cloud Shared Server的/sbin路径没有被加入PATH。如需重启容器请输入完整路径，如sudo /sbin/reboot。
+    13.如果您忘记了您的容器密码或误杀了sshd进程，请联系您的区域管理员进入恢复环境。
+    14.禁止使用任何区域的容器开设违反中华人民共和国法律的站点。
+    15.GS Cloud Shared Server不支持退款，且稳定性无法完全保证。
+
+如果您已经完全理解了以上注意事项，您就可以购买GS Cloud Shared Server并享受您的互联网生活了。
+
+祝您拥有一段美好的建站时光！
+
+GS Team

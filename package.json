@@ -1,0 +1,35 @@
+{
+  "name": "zzchat-client",
+  "version": "3.1.0",
+  "description": "New zzChat Client made of Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzChumo/zzChat-All.git"
+  },
+  "keywords": [
+    "zzChat"
+  ],
+  "author": "zzChumo",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/zzChumo/zzChat-All/issues"
+  },
+  "homepage": "https://github.com/zzChumo/zzChat-All#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "smalltalk": "^4.1.1"
+  }
+}
