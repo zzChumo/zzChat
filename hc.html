@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+2<!DOCTYPE html>
 <!--
     TODO：
     [-] 1.[常驻]记得在DEBIAN里改control的版本号！项目文件夹的名称也要改！
@@ -1218,14 +1218,14 @@
 			    changeFrameHeight();
                 makeRightPlace();
                 document.title=location.search
-                if(window.innerHeight>=435||window.innerWidth>=680){
+                if(window.innerWidth>=680){
                     location.href="m.html";
                 }
 			}
 			
 			window.onresize=function(){
 			    changeFrameHeight();
-                if(window.innerHeight>=435||window.innerWidth>=680){
+                if(window.innerWidth>=680){
                     location.href="m.html";
                 }
 			}
@@ -1342,7 +1342,7 @@
             <br>
             <p class="z"><input id="channelInput" placeholder="频道名" class="gaf"></p>
             <br>
-            <div class="alerta"><a onpointerdown="ripplet(arguments[0])" onClick="alertClose('alert1')">关闭</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="channelCon()">ZC</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="hcCon()">HC</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="zhcCon()">LMC</a></div>
+            <div class="alerta"><a onpointerdown="ripplet(arguments[0])" onClick="alertClose('alert1')">关闭</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="channelCon()">ZC</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="hcCon()">HC</a>&nbsp;<a onpointerdown="ripplet(arguments[0])" onClick="zhcCon()">ZHC</a></div>
         </div>
         <div id="alert2" class="gafalert">
             <div>错误</div>
@@ -1443,11 +1443,11 @@
                 kt1j8rpc
             </a>
             <a style="padding-bottom: 5px;" onpointerdown="ripplet(arguments[0])" class="setting-a">
-                <div>LuminaChat</div>
+                <div>ZhangChat</div>
             </a>
-            <a onpointerdown="ripplet(arguments[0])" class="setting-a" onclick="aHref('zhc.html?main')">
+            <a onpointerdown="ripplet(arguments[0])" class="setting-a" onclick="aHref('zhc.html?chat')">
                 <div>公共频道</div>
-                main
+                chat
             </a>
             <br>
             <br>
@@ -1474,7 +1474,7 @@
             </a>
             <a onpointerdown="ripplet(arguments[0])" class="setting-a">
                 <div>版本</div>
-                3.4.0/3.40
+                3.5.0/3.50
             </a>
             <a onpointerdown="ripplet(arguments[0])" class="setting-a">
                 <div>开发者</div>

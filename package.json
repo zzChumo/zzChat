@@ -29,6 +29,8 @@
     "@electron-forge/maker-zip": "^6.1.1"
   },
   "dependencies": {
+    "electron": "^27.0.4",
+    "electron-packager": "^17.1.2",
     "electron-squirrel-startup": "^1.0.0",
     "smalltalk": "^4.1.1"
   }
