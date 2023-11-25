@@ -10,7 +10,7 @@
     [ ]未完成 [x]已完成 [-]仅检查 [?]已放弃
 -->
 <meta charset="utf-8">
-<meta name="theme-color" content="#00ccaa">
+<!--<meta name="theme-color" content="#00ccaa">-->
 <!--浏览器标题栏颜色，仅对Chrome Mobile、Chrome PWA、微信小程序和其他支持该meta的浏览器有效。-->
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <link rel="icon" href="Demo.png">
@@ -168,7 +168,7 @@
                 position: fixed;
                 top: 0;
                 width: 100%;
-                box-shadow: 0px 3px  3px #00000066;
+                /*box-shadow: 0px 3px  3px #00000066;*/
                 letter-spacing: 0px;
                 z-index: 114514;
             }
@@ -178,12 +178,12 @@
 	    	    margin: 0;
 		        padding: 0;
 		        overflow: hidden;
-    		    background-color: #fff;
+    		    background-color: #f2fffd;
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                box-shadow: 0px 3px 8px 3px #00000066;
+                /*box-shadow: 0px 3px 8px 3px #00000066;*/
                 letter-spacing: 0px;
                 z-index: 114514;
             }
@@ -207,15 +207,21 @@
 		        padding: 15px;
     		    text-decoration: none;
     		    font-size: 19px;
+                cursor: default;
 	    	}
 
             a.material-iconstop {   /*Material Design图标支持（仅标题栏）*/
                 font-family: 'Material Icons';
                 display: inline-block;
-	    	    color: #555;
+	    	    color: #00201a;
 	    	    font-size: 24px;    /*如标题栏内包含中文则需要将此项改为26px*/
 		        text-align: center;
-		        padding: 15px;
+                margin-top: 13px;
+                margin-bottom: 13px;
+		        padding-top: 7px;
+                padding-bottom: 7px;
+                padding-left: 20px;
+                padding-right: 20px;
     		    text-decoration: none;
                 border-radius: 50px
             }
@@ -232,7 +238,7 @@
             a.top {
     		    display: inline-block;
 	    	    color: #00ccaa;
-	    	    font-size: 19px;
+	    	    font-size: 23px;
 		        text-align: center;
 		        padding: 16px 15px;
     		    text-decoration: none;
@@ -243,13 +249,16 @@
 		    }
 
             a.material-iconstop:hover{
-                background-color: #ddd;
+                background-color: #00000033;
             }
 
             a.menu{
+                font-size: 22px;
                 border-radius: 50px;
+                margin-top: -1px;
                 padding-left: 20px;
                 padding-right: 20px;
+                cursor: pointer;
             }
 
             a.menu:hover{
@@ -304,23 +313,24 @@
             }
 
             a.float:hover {
-                color: #f1f1f1;
-                background-color: #00aa88;
+                background: #0bdcba;
+                color: #00201a;
             }
 
             a.float{    /*浮空按钮*/
                 padding: 15px;
-                color: #fff;
-                background-color: #00ccaa;
-                border: 0 solid #00ccaa;
-                border-radius: 50px;
-                box-shadow: 0px 3px  3px #00000066;
+                color: #00201a;
+                background: #0dfedc;
+                border: 0 solid;
+                border-radius: 17px;
+                box-shadow: 0px 3px  7px #00000044;
                 font-size: 25px;
                 font-family: 'Material Icons';
                 z-index: 114513;
                 bottom: 85px;
                 right: 30px;
                 transition: all 0.3s ease-in-out;
+                cursor: pointer;
             }
 
             a.zcantuse:hover {
@@ -440,6 +450,7 @@
                 right: 15px;
                 font-size: 20px;
                 margin-left: 50px;
+                cursor: pointer;
             }
 
             div.sidenavimage{
@@ -648,7 +659,7 @@
 
             @media (prefers-color-scheme: light){
                 div.head{
-                    background: #eee;
+                    background: #00000000;
                 }
 
                 a.setting-a{
@@ -921,7 +932,8 @@
             }
             
             #message-icon{
-                color: #00ccaa;
+                color: #00201a;
+                background: rgb(185, 255, 237);
             }
             
             a.setting-a{
@@ -1089,9 +1101,9 @@
                 //document.getElementById('message').style.top=0;
                 document.getElementById('message').style.display="block";
                 pageFadeOut();
-                document.getElementById('message-icon').style.color='#00ccaa';
-                document.getElementById('people-icon').style.color='#555555';
-                document.getElementById('settings-icon').style.color='#555555';
+                document.getElementById('message-icon').style.background='rgb(185, 255, 237)';
+                document.getElementById('people-icon').style.background='#00000000';
+                document.getElementById('settings-icon').style.background='#00000000';
                 document.getElementById('add-icon').style.bottom='-2px';
             }
             
@@ -1101,9 +1113,9 @@
 		        document.getElementById('people').style.display='block';
 		        document.getElementById('settings').style.display='none';
                 var q=document.documentElement.scrollTop=0;
-                document.getElementById('message-icon').style.color='#555555';
-                document.getElementById('people-icon').style.color='#00ccaa';
-                document.getElementById('settings-icon').style.color='#555555';
+                document.getElementById('message-icon').style.background='#00000000';
+                document.getElementById('people-icon').style.background='rgb(185, 255, 237)';
+                document.getElementById('settings-icon').style.background='#00000000';
                 document.getElementById('add-icon').style.bottom='85px';
             }
             
@@ -1113,9 +1125,9 @@
 		        //document.getElementById('message').style.top="-100px";
 		        document.getElementById('settings').style.display='block';
                 var q=document.documentElement.scrollTop=0;
-                document.getElementById('message-icon').style.color='#555555';
-                document.getElementById('people-icon').style.color='#555555';
-                document.getElementById('settings-icon').style.color='#00ccaa';
+                document.getElementById('message-icon').style.background='#00000000';
+                document.getElementById('people-icon').style.background='#00000000';
+                document.getElementById('settings-icon').style.background='rgb(185, 255, 237)';
                 document.getElementById('add-icon').style.bottom='85px';
             }
             
@@ -1145,7 +1157,7 @@
 			
 			function changeFrameHeight() {
 				var ifm = document.getElementById("iframepage");
-				ifm.height = document.documentElement.clientHeight-111;
+				ifm.height = document.documentElement.clientHeight-120;
 			}
 			
 			function localStorageGet(key) {
@@ -1365,7 +1377,17 @@
         </div>
         <ul class="bottom">
             <li class="bottom">
-                <a onpointerdown="ripplet(arguments[0])" onclick="message()" class="material-iconstop" id="message-icon">question_answer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="people()" onpointerdown="ripplet(arguments[0])" id="people-icon" class="material-iconstop">account_circle</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="material-iconstop" onpointerdown="ripplet(arguments[0])" onclick="settings()" id="settings-icon">settings</a>
+                <a onpointerdown="ripplet(arguments[0])" onclick="message()" class="material-iconstop" id="message-icon">
+                    question_answer
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a onclick="people()" onpointerdown="ripplet(arguments[0])" id="people-icon" class="material-iconstop">
+                    account_circle
+                </a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="material-iconstop" onpointerdown="ripplet(arguments[0])" onclick="settings()" id="settings-icon">
+                    settings
+                </a>
             </li>
         </ul>
         <a onpointerdown="ripplet(arguments[0])" class="float" id="add-icon" onclick="click1()">add</a>
