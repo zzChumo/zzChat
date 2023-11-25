@@ -669,11 +669,25 @@
                 a.setting-a:hover{
                     color: #333;
                 }
+
+                #message-icon{
+                    color: #00201a;
+                    background: rgb(185, 255, 237);
+                }
             }
 
             @media (prefers-color-scheme: dark){
                 .bg{
                     background: #000;
+                }
+
+                a.material-iconstop{
+                    color: #bfeee2;
+                }
+
+                #message-icon{
+                    color: #bfeee2;
+                    background: #2c4e46;
                 }
 
                 .gafalert{
@@ -738,21 +752,21 @@
                 }
                 
                 li a{
-                    color: #eee;
+                    color: #bfeee2;
                 }
                 
                 a.top{
-                    color: #eee;
+                    color: #bfeee2;
                 }
                 
                 li a:hover{
-                    color: #eee;
-                    background: #333;
+                    /*color: #eee;*/
+                    background: #ffffff33;
                 }
                 
                 a.top:hover{
-                    color: #eee;
-                    background: #333;
+                    /*color: #eee;*/
+                    background: #00000000;
                 }
                 
                 h1,h2,h3,h4,h5,h6{
@@ -769,7 +783,7 @@
                 }
 
                 ul.bottom{
-                    background-color: #111;
+                    background-color: #112e29;
                 }
 
                 ul.bottom a:hover{
@@ -777,7 +791,13 @@
                 }
 
                 a.float{
-                    background: #0a8;
+                    background: #005144;
+                    color: #0dfedc;
+                }
+
+                a.float:hover{
+                    background: #338477;
+                    color: #0dfedc;
                 }
                 
                 p{
@@ -818,7 +838,7 @@
                 }
 
                 div.head{
-                    background: #222;
+                    background: #00000000;
                 }
                 
                 footer{
@@ -929,11 +949,6 @@
 		        display: none;
 		        overflow-y: scroll;
 		        z-index: 1;
-            }
-            
-            #message-icon{
-                color: #00201a;
-                background: rgb(185, 255, 237);
             }
             
             a.setting-a{
@@ -1097,38 +1112,73 @@
             }
 
             function message(){
-                var q=document.documentElement.scrollTop=0;
-                //document.getElementById('message').style.top=0;
-                document.getElementById('message').style.display="block";
-                pageFadeOut();
-                document.getElementById('message-icon').style.background='rgb(185, 255, 237)';
-                document.getElementById('people-icon').style.background='#00000000';
-                document.getElementById('settings-icon').style.background='#00000000';
-                document.getElementById('add-icon').style.bottom='-2px';
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+                    var q=document.documentElement.scrollTop=0;
+                    //document.getElementById('message').style.top=0;
+                    document.getElementById('message').style.display="block";
+                    pageFadeOut();
+                    document.getElementById('message-icon').style.background='#2c4e46';
+                    document.getElementById('people-icon').style.background='#00000000';
+                    document.getElementById('settings-icon').style.background='#00000000';
+                    document.getElementById('add-icon').style.bottom='-2px';
+                }else{
+                    var q=document.documentElement.scrollTop=0;
+                    //document.getElementById('message').style.top=0;
+                    document.getElementById('message').style.display="block";
+                    pageFadeOut();
+                    document.getElementById('message-icon').style.background='rgb(185, 255, 237)';
+                    document.getElementById('people-icon').style.background='#00000000';
+                    document.getElementById('settings-icon').style.background='#00000000';
+                    document.getElementById('add-icon').style.bottom='-2px';
+                }
             }
             
             function people(){
-		        document.getElementById('message').style.display="none";
-		        //document.getElementById('message').style.top="-100px";
-		        document.getElementById('people').style.display='block';
-		        document.getElementById('settings').style.display='none';
-                var q=document.documentElement.scrollTop=0;
-                document.getElementById('message-icon').style.background='#00000000';
-                document.getElementById('people-icon').style.background='rgb(185, 255, 237)';
-                document.getElementById('settings-icon').style.background='#00000000';
-                document.getElementById('add-icon').style.bottom='85px';
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+                    document.getElementById('message').style.display="none";
+	    	        //document.getElementById('message').style.top="-100px";
+		            document.getElementById('people').style.display='block';
+		            document.getElementById('settings').style.display='none';
+                    var q=document.documentElement.scrollTop=0;
+                    document.getElementById('message-icon').style.background='#00000000';
+                    document.getElementById('people-icon').style.background='#2c4e46';
+                    document.getElementById('settings-icon').style.background='#00000000';
+                    document.getElementById('add-icon').style.bottom='85px';
+                }else{
+    		        document.getElementById('message').style.display="none";
+	    	        //document.getElementById('message').style.top="-100px";
+		            document.getElementById('people').style.display='block';
+		            document.getElementById('settings').style.display='none';
+                    var q=document.documentElement.scrollTop=0;
+                    document.getElementById('message-icon').style.background='#00000000';
+                    document.getElementById('people-icon').style.background='rgb(185, 255, 237)';
+                    document.getElementById('settings-icon').style.background='#00000000';
+                    document.getElementById('add-icon').style.bottom='85px';
+                }
             }
             
             function settings(){
-		        document.getElementById('message').style.display='none';
-		        document.getElementById('people').style.display='none';
-		        //document.getElementById('message').style.top="-100px";
-		        document.getElementById('settings').style.display='block';
-                var q=document.documentElement.scrollTop=0;
-                document.getElementById('message-icon').style.background='#00000000';
-                document.getElementById('people-icon').style.background='#00000000';
-                document.getElementById('settings-icon').style.background='rgb(185, 255, 237)';
-                document.getElementById('add-icon').style.bottom='85px';
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+                    document.getElementById('message').style.display='none';
+	    	        document.getElementById('people').style.display='none';
+		            //document.getElementById('message').style.top="-100px";
+		            document.getElementById('settings').style.display='block';
+                    var q=document.documentElement.scrollTop=0;
+                    document.getElementById('message-icon').style.background='#00000000';
+                    document.getElementById('people-icon').style.background='#00000000';
+                    document.getElementById('settings-icon').style.background='#2c4e46';
+                    document.getElementById('add-icon').style.bottom='85px';
+                }else{
+    		        document.getElementById('message').style.display='none';
+	    	        document.getElementById('people').style.display='none';
+		            //document.getElementById('message').style.top="-100px";
+		            document.getElementById('settings').style.display='block';
+                    var q=document.documentElement.scrollTop=0;
+                    document.getElementById('message-icon').style.background='#00000000';
+                    document.getElementById('people-icon').style.background='#00000000';
+                    document.getElementById('settings-icon').style.background='rgb(185, 255, 237)';
+                    document.getElementById('add-icon').style.bottom='85px';
+                }
             }
             
             function getUrl() {
@@ -1496,7 +1546,7 @@
             </a>
             <a onpointerdown="ripplet(arguments[0])" class="setting-a">
                 <div>版本</div>
-                3.5.0/3.50
+                3.6.0/3.60
             </a>
             <a onpointerdown="ripplet(arguments[0])" class="setting-a">
                 <div>开发者</div>
